@@ -45,7 +45,7 @@ namespace Paps.UnityToolbarExtenderUIToolkit
                 return;
             CacheNativeToolbarContainers();
 
-            if(!_initialized)
+            if (!_initialized)
             {
                 _initialized = true;
                 OnInitialized?.Invoke();
@@ -82,7 +82,7 @@ namespace Paps.UnityToolbarExtenderUIToolkit
 
         private static bool NeedsWrap()
         {
-            return _innerToolbarObject == null;
+            return _innerToolbarObject == null || UnityToolbarRoot?.panel == null;
         }
     }
 }
